@@ -8,7 +8,7 @@ URL shortening service provide the following mechanisms:
 - Fetch full URL with respect to the Short URL
 - Fetch hits count on the Short URL
 
-#Steps to start the service
+# Steps to start the service
 Fork this repository, then clone your fork, and run this in your newly created directory:
 
 ``` bash
@@ -48,6 +48,6 @@ You can now access the server at http://localhost:8000
 ## Get Hits on Short URL
 [GET] http://example.com/hits/[short URL code]
 
-#Postman Collection and Documentation
+## Postman Collection and Documentation
 
 https://documenter.getpostman.com/view/8151370/UV5WCxqG
