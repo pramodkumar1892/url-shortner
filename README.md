@@ -35,7 +35,7 @@ You can now access the server at http://localhost:8000
 ## Create Short URL
 [POST] http://example.com/short
 
-###Parameters
+***Parameters***
 
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| ---------------|
@@ -48,3 +48,6 @@ You can now access the server at http://localhost:8000
 ## Get Hits on Short URL
 [GET] http://example.com/hits/[short URL code]
 
+#Postman Collection and Documentation
+
+https://documenter.getpostman.com/view/8151370/UV5WCxqG
