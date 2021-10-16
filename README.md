@@ -8,7 +8,7 @@ URL shortening service provide the following mechanisms:
 - Fetch full URL with respect to the Short URL
 - Fetch hits count on the Short URL
 
-# Steps to start the service
+## Steps to start the service
 Fork this repository, then clone your fork, and run this in your newly created directory:
 
 ``` bash
@@ -31,8 +31,8 @@ php artisan serve
 You can now access the server at http://localhost:8000
 
 
-# API endpoints
-## Create Short URL
+## API endpoints
+### Create Short URL
 [POST] http://example.com/short
 
 ***Parameters***
@@ -42,10 +42,10 @@ You can now access the server at http://localhost:8000
 |     `link` | required | URL  |  A valid URL that needs to be shortened. Example: http://domain.com                                                                |
    
 
-## Get Full URL
+### Get Full URL
 [GET] http://example.com/short/[short URL code]
 
-## Get Hits on Short URL
+### Get Hits on Short URL
 [GET] http://example.com/hits/[short URL code]
 
 ## Postman Collection and Documentation
