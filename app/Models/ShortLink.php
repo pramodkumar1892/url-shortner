@@ -5,7 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Urls extends Model
+class ShortLink extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'code',
+        'link',
+        'use_count'
+    ];
 }

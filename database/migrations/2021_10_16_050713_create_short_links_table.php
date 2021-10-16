@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUrlsTable extends Migration
+class CreateShortLinksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateUrlsTable extends Migration
      */
     public function up()
     {
-        Schema::create('urls', function (Blueprint $table) {
-            $table->id();
+        Schema::create('short_links', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('code')->collation('utf8_bin')->unique();
+            $table->string('link')->unique();
+            $table->string('hits')->default(0);
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateUrlsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('urls');
+        Schema::dropIfExists('short_links');
     }
 }

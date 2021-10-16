@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShortLinkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('short', [ShortLinkController::class, 'shortenLink']);
+Route::get('short/{code}', [ShortLinkController::class, 'getLink']);
+Route::get('hits/{code}', [ShortLinkController::class, 'getHits']);
+
