@@ -25,9 +25,13 @@ class ShortLinkController extends Controller
         }
 
         $link = strtolower($request->link);
+
+        // Find if link is already exists in the database
         $find = ShortLink::where('link', $link)->first();
         if($find){
-            return build_short_url($find->code);
+            // Return the short URL if link is already present
+            $url = build_short_url($find->code);
+            return response($url, config('constants.SUCCESS'));
         }
 
         // If duplicate shortCode exists, generate new one
@@ -47,7 +51,7 @@ class ShortLinkController extends Controller
 
         if($result){
             $url = build_short_url($shortCode);
-            return response($url, config('constants.CREATED'));
+            return response($url, config('constants.SUCCESS'));
         }
     }
 

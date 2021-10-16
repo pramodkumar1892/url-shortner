@@ -51,3 +51,10 @@ You can now access the server at http://localhost:8000
 ## Postman Collection and Documentation
 
 https://documenter.getpostman.com/view/8151370/UV5WCxqG
+
+## Unit Tests
+Unit test cases are added in the repository.
+To run the test cases, use following command:
+```
+vendor/bin/phpunit
+```
